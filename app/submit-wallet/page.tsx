@@ -1,7 +1,7 @@
 // app/wallet/page.js
 "use client";
 
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { isAddress } from "ethers";
 import { Loader2 } from "lucide-react";
@@ -12,7 +12,7 @@ export default function Wallet() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e : FormEvent<HTMLFormElement>) => {
     e?.preventDefault();
     if (!isAddress(wallet)) {
       setError("Invalid address. Enter your EVM compatible address");
@@ -44,7 +44,7 @@ export default function Wallet() {
 
   return (
     <form
-      onSubmit={handleSubmit}
+      onSubmit={e => handleSubmit(e)}
       className="h-[calc(100vh-60px)] flex items-center justify-center flex-col bg-[#fef5e7]"
     >
       <h1 className="text-2xl lg:text-4xl mb-5 text-black">Submit your wallet address</h1>

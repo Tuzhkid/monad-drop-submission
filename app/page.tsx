@@ -38,7 +38,7 @@ const GaynadsLandingPage = () => {
         <p className=" text-[#7d6f6a] max-w-3xl mt-4">
           Memecoins on Monad are about to go ballistic! GayNads Pride Festival
           celebrates the unique and vibrant community that supports $GNADS, the
-          ticker for Monad's zesty purple chain.
+          ticker for Monad&apos;s zesty purple chain.
         </p>
         <p className=" text-[#7d6f6a] max-w-3xl mt-4">
           If you have devnet access, submit your wallets for some $GNADS test
