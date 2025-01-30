@@ -38,7 +38,7 @@ export default function Wallet() {
       router.push("/success");
     } catch (error) {
       setLoading(false);
-      setError((error as any)?.message);
+      setError((error as Error)?.message);
     }
   };
 
